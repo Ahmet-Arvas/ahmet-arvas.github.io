@@ -1,61 +1,12 @@
-<!DOCTYPE html>
-<html>
+<div id='loading'><img src='loading.gif' /></div>
+<div id='content' style='display:none'><p>content here</p></div>
 
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<title></title>
-<style>
-.popout-div {
-    font-family: 'Roboto', sans-serif;
-    background-color: #0d0d0d;
-    color: #dedede;
-    animation: none;
-    background:url("https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-</style>
-
-<script>
-function showBackground() {
-  var element = document.getElementById("page-bg");
-  element.classList.add("popout-div");
-}
-
-var counter = 0;
-var interval = setInterval(function() {
-    counter++;
-    if (counter == 5) {
-        showBackground();
-        clearInterval(interval);
+<script type='text/javascript'>
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#loading').hide(); 
+    $('#content').fadeIn();
     }
-}, 1000);
+  , 5000);
+}
 </script>
-</head>
-<body>
-    <div id="page-bg"></div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Some</th>
-                    <th>Table</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Some</th>
-                    <th>Table</th>
-                </tr>
-            </tbody>
-        </table>
-</body>
-</html>
