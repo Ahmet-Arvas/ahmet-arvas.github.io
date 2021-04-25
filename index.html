@@ -1,12 +1,19 @@
-<div id='loading'><img src='https://klasiksanatlar.com/img/sayfalar/b/1_1598452306_resim.png' /></div>
-<div id='content' style='display:none'><p>content here</p></div>
+<div id="myDiv">Ahmet Bu Gidecek</div>
+<script type="text/javascript">
 
-<script type='text/javascript'>
-$(document).ready(function(){
-  setTimeout(function(){
-    $('#loading').hide(); 
-    $('#content').fadeIn();
-    }
-  , 5000);
-}
+  (function(){
+    var myDiv = document.getElementById("myDiv"),
+
+      show = function(){
+        myDiv.style.display = "block";
+        setTimeout(hide, 5000); // 5 seconds
+      },
+
+      hide = function(){
+        myDiv.style.display = "none";
+      };
+
+    show();
+  })();
+
 </script>
