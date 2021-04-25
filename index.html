@@ -1,4 +1,5 @@
 <div id="myDiv">Ahmet Bu Gidecek</div>
+<img src="arka.jpg" id="bg" alt="">
 <script type="text/javascript">
 
   (function(){
@@ -18,11 +19,13 @@
 
 </script>
 <style>
-div{ 
-  background: url(arka.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 </style>
