@@ -6,7 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
-<div id="myDiv"><span id="head" class="shake-slow">Ahmet Arvas</br><font size="2">Developer</font></span></div>
+<div id="myDiv">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+  }
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+<span id="head" class="shake-slow">Ahmet Arvas</br><font size="2">Developer</font></span>
+</div>
 </body>
 <style type="text/css">
 .overlay {
