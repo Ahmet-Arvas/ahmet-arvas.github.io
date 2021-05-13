@@ -9,4 +9,3 @@ You Can Use All Files! This is 100% open source 👍
 
 ### Thanks...♥️
 I used this repo for shake items: [CSS Shake 🔗](https://github.com/elrumordelaluz/csshake)
-I ♥️ Github
