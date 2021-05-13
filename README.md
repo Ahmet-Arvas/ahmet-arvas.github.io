@@ -6,3 +6,7 @@ You can go with this [link.🔗](http://ahmet-arvas.github.io)
 
 ### Can i use your codes? 🤯
 You Can Use All Files! This is 100% open source 👍
+
+### Thanks...♥️
+I used this repo for shake items: [CSS Shake 🔗](https://github.com/elrumordelaluz/csshake)
+I ♥️ Github
