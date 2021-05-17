@@ -93,5 +93,7 @@ body {
   padding-bottom:0;
 }
 .active {
-
+  color:blue;
+  pointer-events: none;
+  cursor: default;
 }
