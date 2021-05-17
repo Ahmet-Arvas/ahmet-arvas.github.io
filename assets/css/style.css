@@ -94,11 +94,11 @@ body {
 }
 .menu {
   margin:auto;
-  padding :20px;
+  padding :5px;
   right:0;
   top:0; 
   position:absolute;
-  border-radius:10px;
-  background-color:#0ed145;
-  color: black;
+  border-radius:5px;
+  background-color:black;
+  color: white;
 }
