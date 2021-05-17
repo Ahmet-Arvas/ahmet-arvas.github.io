@@ -92,8 +92,13 @@ body {
   margin-bottom:0;
   padding-bottom:0;
 }
-.active {
-  color:blue;
-  pointer-events: none;
-  cursor: default;
+.menu {
+  margin:auto;
+  padding :20px;
+  right:0;
+  top:0; 
+  position:absolute;
+  border-radius:10px;
+  background-color:#0ed145;
+  color: black;
 }
