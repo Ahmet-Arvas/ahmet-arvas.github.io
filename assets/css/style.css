@@ -95,7 +95,9 @@ body {
 .menu {
   margin:auto;
   padding :2px;
-  right:0;
+  border: 1px solid white;
+  border-radius:2px;
+  left:0;
   top:0; 
   position:absolute;
   background-color:black;
