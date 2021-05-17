@@ -104,9 +104,6 @@ body {
 }
 .typing-demo {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 22ch;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
