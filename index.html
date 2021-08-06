@@ -90,6 +90,50 @@
                 opacity: 1; 
             } 
         } 
+
+
+h3{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skillbox{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.skillbox p{
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    padding: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.skillbox p:nth-child(2){
+    float: right;
+    position: relative;
+    top: -25px;
+}
+
+.skill{
+    background: #282828;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #0fffb7;
+    border-radius: 2px;
+}
+
+.skill_level{
+    background: #0fffb7;
+    width: 100%;
+    height: 10px;
+}
     </style> 
 <body>
   <canvas></canvas>
@@ -105,10 +149,58 @@
   
   <div id="pagetwo" style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: center;width:100%; height:100%; background-color:#005fd1;">
     <div style="margin-top:55px; margin-left:20px; margin-right:20px; width:100%;">
-      About me 👇
+      <h1>About me 👇</h1>
       <p style="">
-        Languages:
-      </p>
+        Hello, I am Ahmet Arvas, I love programming and linux operating systems. My favorite operating system is Debian and my favorite programming language is java. My hobbies are astronomy and chess.
+       </p>
+      <div class="center">
+       <h3>Programming Language Skill</h3>
+       <div class="skillbox">
+           <p>C</p>
+           <p>40%</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 40%"></div>
+           </div>
+       </div>
+       <div class="skillbox">
+           <p>C#</p>
+           <p>30%</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 30%"></div>
+           </div>
+       </div>
+       <div class="skillbox">
+           <p>Python</p>
+           <p>60%</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 60%"></div>
+           </div>
+       </div>
+
+       <div class="skillbox">
+           <p>PHP</p>
+           <p>80%</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 80%"></div>
+           </div>
+       </div>
+
+       <div class="skillbox">
+           <p>Java</p>
+           <p>57%</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 57%"></div>
+           </div>
+       </div>
+
+       <div class="skillbox">
+           <p>SQL</p>
+           <p>44%</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 44%"></div>
+           </div>
+       </div>
+    </div>
     </div>
    <a href="#pageone" class="material-icons up">expand_less</a>
   </div>
