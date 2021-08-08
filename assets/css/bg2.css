@@ -13,7 +13,7 @@ body {
   left: 0;
   width: 100vw;
   overflow: hidden;
-  height: 80%;
+  height: 100vh;
 }
 
 canvas {
