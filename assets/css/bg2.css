@@ -1,10 +1,7 @@
 body {
 
   font-family: 'Alatsi', sans-serif;
-
   margin: 0;
-  overflow: hidden;
-  background: black;
 }
 
 .container {
@@ -17,11 +14,6 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-}
-
-.title {
-  font-size: 10vw;
-  color: white;
 }
 
 canvas {
