@@ -26,354 +26,76 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="assets/css/bg.css">
 </head>
-<style> 
-.circular-menu {
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
+<!doctype html>
+<html lang="en">
+<head>
+	<body>
+	  <div class="main-content">
+	    <center>
+	      <h2 class="logo">
+	        Ahmet-Arvas
+        </h2>
+      </center>
+      <h2 class="header">
+        <i class="ti ti-arrow-big-right" style="font-size:20px;"></i>About me
+      </h2>
+      <p>
+        I'm Ahmet (Just a programmer) I'm interested in Philosophy and Astronomy.
+      </p>
+      <h2 class="header">
+        <i class="ti ti-arrow-big-right" style="font-size:20px;"></i>Projects
+      </h2>
+      <fieldset>
+        <legend>
+          Coming Soon
+        </legend>
+        You can look up.
+      </fieldset>
+	  </div>
+    <a href="#" class="top"><i class="ti ti-arrow-big-top" style="font-size:25px;"></i></a>
+	</body>
+<style>
+.header{
+  color:yellow;
 }
-
-.circular-menu .floating-btn {
-  display: block;
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 50%;
-  background-color: hsl(4, 98%, 60%);
-  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);  
-  color: hsl(0, 0%, 100%);
-  text-align: center;
-  line-height: 3.9;
-  cursor: pointer;
-  outline: 0;
-}
-
-.circular-menu.active .floating-btn {
-  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
-}
-
-.circular-menu .floating-btn:active {
-  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
-}
-
-.circular-menu .floating-btn i {
-  font-size: 1.3em;
-  transition: transform .2s;  
-}
-
-.circular-menu.active .floating-btn i {
-  transform: rotate(-45deg);
-}
-
-.circular-menu:after {
-  display: block;
-  content: ' ';
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -2;
-  background-color: hsl(4, 98%, 60%);
-  transition: all .3s ease;
-}
-
-.circular-menu.active:after {
-  transform: scale3d(5.5, 5.5, 1);
-  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
-}
-
-.circular-menu .items-wrapper {
-  padding: 0;
-  margin: 0;
-}
-
-.circular-menu .menu-item {
-  position: absolute;
-  top: .2em;
-  right: .2em;
-  z-index: -1;
-  display: block;
+.top {
+  --offset: 50px; 
+  position: sticky;
+  bottom: 20px;      
+  margin-right:10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
-  font-size: 1em;
-  width: 3em;
-  height: 3em;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
   border-radius: 50%;
-  text-align: center;
-  line-height: 3;
-  background-color: hsla(0,0%,0%,.1);
-  transition: transform .3s ease, background .2s ease;
+  white-space: nowrap;
 }
 
-.circular-menu .menu-item:hover {
-  background-color: hsla(0,0%,0%,.3);
-}
-
-.circular-menu.active .menu-item {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.circular-menu.active .menu-item:nth-child(1) {
-  transform: translate3d(1em,-7em,0);
-}
-
-.circular-menu.active .menu-item:nth-child(2) {
-  transform: translate3d(-3.5em,-6.3em,0);
-}
-
-.circular-menu.active .menu-item:nth-child(3) {
-  transform: translate3d(-6.5em,-3.2em,0);
-}
-
-.circular-menu.active .menu-item:nth-child(4) {
-  transform: translate3d(-7em,1em,0);
-}
-
-/**
- * The other theme for this menu
- */
-
-.circular-menu.circular-menu-left {
-  right: auto; 
-  left: 1em;
-}
-
-.circular-menu.circular-menu-left .floating-btn {
-  background-color: hsl(217, 89%, 61%);
-}
-
-.circular-menu.circular-menu-left:after {
-  background-color: hsl(217, 89%, 61%);
-}
-
-.circular-menu.circular-menu-left.active .floating-btn i {
-  transform: rotate(90deg);
-}
-
-.circular-menu.circular-menu-left.active .menu-item:nth-child(1) {
-  transform: translate3d(-1em,-7em,0);
-}
-
-.circular-menu.circular-menu-left.active .menu-item:nth-child(2) {
-  transform: translate3d(3.5em,-6.3em,0);
-}
-
-.circular-menu.circular-menu-left.active .menu-item:nth-child(3) {
-  transform: translate3d(6.5em,-3.2em,0);
-}
-
-.circular-menu.circular-menu-left.active .menu-item:nth-child(4) {
-  transform: translate3d(7em,1em,0);
-}
-        .name{
-            pointer-events: none;
-            text-align: center;
-            width: 200px;
-	          height: 200px;
-	         	position: absolute;
-          	top:0;
-          	bottom: 0;
-          	left: 0;
-          	right: 0;
-          	margin: auto;
-        }
-        .up{
-            display: table;
-            margin: 0 auto;
-            width: 50px;
-            height: 50px;
-            color: black;
-            border-radius: 50%;
-            background-color: yellow;
-            text-decoration: none;
-            text-align: center;
-            font-size: 50px;
-            position: absolute;
-        }
-        .down{
-            color: black;
-            border-radius: 50%;
-            background-color: yellow;
-            text-decoration: none;
-            text-align: center;
-            width: 50px;
-	          height: 50px;
-	         	position: absolute;
-          	bottom: 20px;
-          	left: 0;
-          	right: 0;
-          	margin: auto;
-          	font-size: 50px;
-        }
-        html{
-          scroll-behavior: smooth;
-        }
-        body {
-          	position: absolute;
-          	bottom: 0;
-          	left: 0;
-          	right: 0;
-          	margin: auto;
-            overflow: hidden;
-            font-family: 'Ubuntu Condensed', sans-serif; 
-            color:white;
-            animation: fadeInAnimation ease 4s; 
-            animation-iteration-count: 1; 
-            animation-fill-mode: forwards; 
-        } 
-        @keyframes fadeInAnimation { 
-            0% { 
-                opacity: 0; 
-            } 
-            100% { 
-                opacity: 1; 
-            } 
-        } 
-
-
-h3{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.skillbox{
-    box-sizing: border-box;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.skillbox p{
-    color: #fff;
-    text-transform: uppercase;
-    margin: 0 0 10px;
-    padding: 0;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.skillbox p:nth-child(2){
-    float: right;
-    position: relative;
-    top: -25px;
-}
-
-.skill{
-    background: #282828;
-    padding: 4px;
-    box-sizing: border-box;
-    border: 1px solid #0fffb7;
-    border-radius: 2px;
-}
-
-.skill_level{
-    background: #0fffb7;
-    width: 100%;
-    height: 10px;
-}
-    </style> 
-<body>
-  <canvas></canvas>
-  <div id="circularMenu" class="circular-menu">
-
-  <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
-    <i class="material-icons">add</i>
-  </a>
-
-  <menu class="items-wrapper">
-    <a href="https://youtube.com/channel/UC3tw2_U2URWELtWeefTZ-5w" class="menu-item material-icons">play_circle_filled</a>
-    <a href="https://t.me/ahmet_arvas" class="menu-item material-icons">telegram</a>
-    <a href="mailto: ahmetarvas67@gmail.com" class="menu-item material-icons">mail</a>
-    <a href="https://twitter.com/benahmetarvas?s=09" class="menu-item material-icons">account_circle</a>
-  </menu>
-
-</div>
-
-
-<div id="circularMenu1" class="circular-menu circular-menu-left">
-
-  <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
-    <i class="material-icons">menu</i>
-  </a>
-
-  <menu class="items-wrapper">
-    <a href="index.html" class="menu-item material-icons">home</a>
-    <a href="contact.html" class="menu-item material-icons">phone</a>
-    <a href="blog" class="menu-item material-icons">book</a>
-    <a href="aboutme.html" class="menu-item material-icons">info</a>
-  </menu>
-</div>
-  <div id="pageone" style="width:100%; height:120%;">
-  <div class="name">
-    <img style="border-radius: 50%; width:100px; height:100px; " src="https://www.w3schools.com/howto/img_avatar.png" />
-    <h3>AHMET ARVAS</h3>
-    <p style="color:lightgray">Programmer</p>
-    <a href="blog" style="pointer-events:auto; text-decoration:none; font-size:20px; color:black; padding:10px; border-radius:5px; background-color:lightgray;"><i class="material-icons" style="font-size:20px;">library_books</i> Go to the blog</a>
-  </div>
-  <a href="#pagetwo" class="down material-icons">expand_more</a>
-  </div>
+.main-content{
   
-  <div id="pagetwo" style="display: flex; flex-direction: row;flex-wrap: wrap;justify-content: center;width:100%; height:100%; background-color:#005fd1;">
-    <div style="margin-top:55px; margin-left:20px; margin-right:20px; width:100%;">
-      <h1>About me 👇</h1>
-      <p style="">
-        Hello, I am Ahmet Arvas, I love programming and linux operating systems. My favorite operating system is Debian and my favorite programming language is java. My hobbies are astronomy and chess.
-       </p>
-      <div class="center">
-       <h3>Programming Language Skill</h3>
-       <div class="skillbox">
-           <p>C</p>
-           <p>40%</p>
-           <div class="skill">
-               <div class="skill_level" style="width: 40%"></div>
-           </div>
-       </div>
-       <div class="skillbox">
-           <p>C#</p>
-           <p>30%</p>
-           <div class="skill">
-               <div class="skill_level" style="width: 30%"></div>
-           </div>
-       </div>
-       <div class="skillbox">
-           <p>Python</p>
-           <p>60%</p>
-           <div class="skill">
-               <div class="skill_level" style="width: 60%"></div>
-           </div>
-       </div>
+}
 
-       <div class="skillbox">
-           <p>PHP</p>
-           <p>80%</p>
-           <div class="skill">
-               <div class="skill_level" style="width: 80%"></div>
-           </div>
-       </div>
+body, html{
+font-family: "Lucida Console", "Courier New", monospace;
+scroll-behavior: smooth;
+}
 
-       <div class="skillbox">
-           <p>Java</p>
-           <p>57%</p>
-           <div class="skill">
-               <div class="skill_level" style="width: 57%"></div>
-           </div>
-       </div>
-
-       <div class="skillbox">
-           <p>SQL</p>
-           <p>44%</p>
-           <div class="skill">
-               <div class="skill_level" style="width: 44%"></div>
-           </div>
-       </div>
-    </div>
-    </div>
-   <a href="#pageone" class="material-icons up">expand_less</a>
-  </div>
- 
-  <script src="assets/js/bg.js"></script>
-</body>
+body{
+display: grid;
+grid-template-columns: auto 0px; 
+}
+.logo{
+background-image: linear-gradient(
+    45deg,
+    #ff0a78,
+    #5773ff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
 </html>
