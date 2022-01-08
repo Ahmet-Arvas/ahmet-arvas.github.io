@@ -38,12 +38,7 @@
       <h2 class="header">
         <i class="ti ti-arrow-big-right" style="font-size:20px;"></i>Projects
       </h2>
-      <fieldset>
-        <legend>
-          Coming Soon
-        </legend>
-        You can look up.
-      </fieldset>
+      <div id="repo_list"></div>
       <br>
       <hr>
       <h2>Contact</h2>
@@ -57,18 +52,17 @@
 $("#btn_get_repos").click(function() {
     $.ajax({
         type: "GET",
-        url: "https://api.github.com/users/google/repos",
+        url: "https://api.github.com/users/ahmet-arvas/repos",
         dataType: "json",
         success: function(result) {
             for( i in result ) {
                 $("#repo_list").append(
-                    "<li><a href='" + result[i].html_url + "' target='_blank'>" +
-                    result[i].name + "</a></li>"
+                  "<fieldset><legend><a href='" + result[i].html_url + "' target='_blank'>" +
+                    result[i].name + "</a></li></legend></fieldset>"
                 );
                 console.log("i: " + i);
             }
             console.log(result);
-            $("#repo_count").append("Total Repos: " + result.length);
         }
     });
 });
