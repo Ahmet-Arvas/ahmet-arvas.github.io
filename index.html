@@ -46,10 +46,7 @@
       <a href="https://www.linkedin.com/in/ahmet-arvas-5714451b5" style="text-decoration:none; color:white;"><i class="ti ti-brand-linkedin logo"></i> Linkedin Profile</a><br>
       <a href="https://github.com/ahmet-arvas" style="text-decoration:none; color:white;"><i class="ti ti-brand-github logo"></i> GitHub Profile</a><br>
       <a href="https://discord.gg/XmG9fShkfS" style="text-decoration:none; color:white;"><i class="ti ti-brand-discord logo"></i> Discord Channel</a><br>
-      <button id="btn_get_repos">jjjj</button>
-      <ul id="repo_list"></ul>
 <script>
-$("#btn_get_repos").click(function() {
     $.ajax({
         type: "GET",
         url: "https://api.github.com/users/ahmet-arvas/repos",
@@ -57,15 +54,14 @@ $("#btn_get_repos").click(function() {
         success: function(result) {
             for( i in result ) {
                 $("#repo_list").append(
-                  "<fieldset><legend><a href='" + result[i].html_url + "' target='_blank'>" +
-                    result[i].name + "</a></li></legend></fieldset>"
+                  "<fieldset><legend><a style='text-decoration:none; color:white;' href='" + result[i].html_url + "' target='_blank'>" +
+                    result[i].name + "</a></li></legend>" + result[i]. description + "</fieldset>"
                 );
                 console.log("i: " + i);
             }
             console.log(result);
         }
     });
-});
 </script>
 	  </div>
     <a href="#" class="top circle"><i class="ti ti-arrow-big-top"></i></a>
