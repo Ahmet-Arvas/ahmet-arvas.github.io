@@ -109,6 +109,7 @@ body{
 }
 </style>
 <script>
+$("#btn_get_repos").click(function() {
     $.ajax({
         type: "GET",
         url: "https://api.github.com/users/google/repos",
@@ -125,5 +126,6 @@ body{
             $("#repo_count").append("Total Repos: " + result.length);
         }
     });
+});
 </script>
 </html>
