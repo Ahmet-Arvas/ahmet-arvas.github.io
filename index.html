@@ -17,7 +17,7 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="iconfont/tabler-icons.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <!doctype html>
 <html lang="en">
@@ -51,6 +51,28 @@
       <a href="https://www.linkedin.com/in/ahmet-arvas-5714451b5" style="text-decoration:none; color:white;"><i class="ti ti-brand-linkedin logo"></i> Linkedin Profile</a><br>
       <a href="https://github.com/ahmet-arvas" style="text-decoration:none; color:white;"><i class="ti ti-brand-github logo"></i> GitHub Profile</a><br>
       <a href="https://discord.gg/XmG9fShkfS" style="text-decoration:none; color:white;"><i class="ti ti-brand-discord logo"></i> Discord Channel</a><br>
+      <button id="btn_get_repos">jjjj</button>
+      <ul id="repo_list"></ul>
+<script>
+$("#btn_get_repos").click(function() {
+    $.ajax({
+        type: "GET",
+        url: "https://api.github.com/users/google/repos",
+        dataType: "json",
+        success: function(result) {
+            for( i in result ) {
+                $("#repo_list").append(
+                    "<li><a href='" + result[i].html_url + "' target='_blank'>" +
+                    result[i].name + "</a></li>"
+                );
+                console.log("i: " + i);
+            }
+            console.log(result);
+            $("#repo_count").append("Total Repos: " + result.length);
+        }
+    });
+});
+</script>
 	  </div>
     <a href="#" class="top circle"><i class="ti ti-arrow-big-top"></i></a>
 	</body>
@@ -108,24 +130,4 @@ body{
   -webkit-text-fill-color: transparent;
 }
 </style>
-<script>
-$("#btn_get_repos").click(function() {
-    $.ajax({
-        type: "GET",
-        url: "https://api.github.com/users/google/repos",
-        dataType: "json",
-        success: function(result) {
-            for( i in result ) {
-                $("#repo_list").append(
-                    "<li><a href='" + result[i].html_url + "' target='_blank'>" +
-                    result[i].name + "</a></li>"
-                );
-                console.log("i: " + i);
-            }
-            console.log(result);
-            $("#repo_count").append("Total Repos: " + result.length);
-        }
-    });
-});
-</script>
 </html>
