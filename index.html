@@ -5,23 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   <title>Ahmet Arvas</title>
-  <meta name="description" content="Ahmet Arvas.">
+  <meta name="description" content="Ahmet Arvas's personal website">
   <meta name="author" content="Ahmet Arvas">
 
   <meta property="og:title" content="Ahmet Arvas">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.ahmet-arvas.github.io/index.html">
-  <meta property="og:description" content="Ahmet Arvas">
+  <meta property="og:description" content="Ahmet Arvas's personal website">
   <meta property="og:image" content="image.png">
-
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="iconfont/tabler-icons.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
 </head>
-<!doctype html>
-<html lang="en">
-<head>
 	<body>
 	  <div class="main-content">
 	    <center>
@@ -46,78 +44,7 @@
       <a href="https://www.linkedin.com/in/ahmet-arvas-5714451b5" style="text-decoration:none; color:white;"><i class="ti ti-brand-linkedin logo"></i> Linkedin Profile</a><br>
       <a href="https://github.com/ahmet-arvas" style="text-decoration:none; color:white;"><i class="ti ti-brand-github logo"></i> GitHub Profile</a><br>
       <a href="https://discord.gg/XmG9fShkfS" style="text-decoration:none; color:white;"><i class="ti ti-brand-discord logo"></i> Discord Channel</a><br>
-<script>
-    $.ajax({
-        type: "GET",
-        url: "https://api.github.com/users/ahmet-arvas/repos",
-        dataType: "json",
-        success: function(result) {
-            for( i in result ) {
-                $("#repo_list").append(
-                  "<fieldset><legend><a style='text-decoration:none; color:white;' href='" + result[i].html_url + "' target='_blank'>" +
-                    result[i].name + "</a></li></legend>" + result[i]. description + "</fieldset>"
-                );
-                console.log("i: " + i);
-            }
-            console.log(result);
-        }
-    });
-</script>
 	  </div>
     <a href="#" class="top circle"><i class="ti ti-arrow-big-top"></i></a>
 	</body>
-<style>
-.header{
-  background-image: linear-gradient(
-    45deg,
-    #56CCF2,
-    #2F80ED
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.top {
-  --offset: 50px; 
-  position: sticky;
-  bottom: 20px;      
-  margin-right:10px; 
-  place-self: end;
-  margin-top: calc(100vh + var(--offset));
-  text-decoration: none;
-  padding: 10px;
-  font-family: sans-serif;
-  color: #fff;
-  background: #000;
-  white-space: nowrap;
-}
-.circle{
-  border-radius: 50%;
-}
-.main-content{
-  
-}
-body, html{
-  font-family: "Courier New", monospace;
-  scroll-behavior: smooth;
-  background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color:white;
-}
-body{
-  display: grid;
-  grid-template-columns: auto 0px; 
-}
-.logo{
-  background-image: linear-gradient(
-    45deg,
-    #ff0a78,
-    #5773ff
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
 </html>
