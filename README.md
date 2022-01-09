@@ -8,4 +8,4 @@ You can go with this [link🔗](http://ahmet-arvas.github.io)
 You Can Use All Files! This is 100% open source 👍
 
 ### Thanks...♥️
-(https://tabler-icons.io/)
+[Tabler Icons](https://tabler-icons.io/)
